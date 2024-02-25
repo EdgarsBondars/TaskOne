@@ -11,6 +11,7 @@ namespace StoreRandomData
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
+            builder.Services.AddHttpClient();
             builder.Services.AddTransient<IBlobLogic, BlobLogic>();
             builder.Services.AddTransient<ITableLogic, TableLogic>();
             builder.Services.AddSingleton(provider =>

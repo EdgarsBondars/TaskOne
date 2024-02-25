@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<IBlobLogic, BlobLogic>();
 builder.Services.AddTransient<ITableLogic, TableLogic>();
 
+builder.Services.AddHttpClient();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
